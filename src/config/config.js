@@ -164,6 +164,12 @@ export const config = convict({
       }
     }
   },
+  chatApiEndpoint: {
+    doc: 'Find api endpoint',
+    format: String,
+    default: 'http://localhost:3001',
+    env: 'FIND_API_ENDPOINT'
+  },
   redis: /** @type {Schema<RedisConfig>} */ ({
     host: {
       doc: 'Redis cache host',
